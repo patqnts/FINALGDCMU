@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9e560ee6d54f54e4b9babe5c1b2b2328
+  - enabled: 1
+    path: Assets/Scenes/MeanGirls.unity
+    guid: b5acd2c0f42ff364495b1b9e7b37da52
+  - enabled: 1
+    path: Assets/Scenes/Racism.unity
+    guid: 86c7c71f79c731b4397c295e9b218b64
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 5cd73842292beb84781163f57fac1f6a, type: 2}

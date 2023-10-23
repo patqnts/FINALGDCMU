@@ -64,7 +64,7 @@ public class TextDialogue : MonoBehaviour
     {
         if (screenBackground != null && screenBackground.activeSelf)
         {
-            screenBackground.SetActive(false);
+            Destroy(screenBackground);
         }
         
         if (hasNextDialogue && NextDialogue != null) //IF THE DIALOGUE HAS NEXT CONVERSATION

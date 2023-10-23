@@ -7,7 +7,7 @@ public class SelectStoryScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public Image selectImage;
-
+    public UISelectedStory UISelectedStory;
 
     public Image TargetImage;
     public Text TargetString;
@@ -24,5 +24,10 @@ public class SelectStoryScript : MonoBehaviour
     {
         TargetString.text= sypnosis;
         TargetImage.sprite = selectImage.sprite;
+    }
+
+    public void PassSceneName(string sceneTitle)
+    {
+        UISelectedStory.sceneNameToLoad = sceneTitle;
     }
 }
