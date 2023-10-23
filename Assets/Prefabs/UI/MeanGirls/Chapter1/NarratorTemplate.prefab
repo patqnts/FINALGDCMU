@@ -95,3 +95,8 @@ MonoBehaviour:
   dialogueText: {fileID: 9172500063786604220}
   dialogueTexts:
   - 
+  isDialogue: 0
+  hasNextDialogue: 0
+  NextDialogue: {fileID: 0}
+  screenBackground: {fileID: 0}
+  answerDataHolder: 0
