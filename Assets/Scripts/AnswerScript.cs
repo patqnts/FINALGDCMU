@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ public class AnswerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextDialogue targetText;
-    public TextDialogue responseTargetText;
+    public TextDialogue[] responseTargetText;
     public GameObject AnswerGameObject;
     public GameObject QuestionGameObject;
     void Start()
@@ -30,6 +31,10 @@ public class AnswerScript : MonoBehaviour
 
     public void PassAnswerData(int myAnswerInt)
     {
-        responseTargetText.answerDataHolder = myAnswerInt;
+        for(int i = 0; i < responseTargetText.Length; i++)
+        {
+            responseTargetText[i].answerDataHolder = myAnswerInt;
+        }
+         
     }
 }
