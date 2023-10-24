@@ -24,8 +24,8 @@ public class TextDialogue : MonoBehaviour
         else
         {
             StartCoroutine(TypeText(dialogueTexts[answerDataHolder]));
-        }  
-            screenBackground = GameObject.Find("Background");
+        }
+        screenBackground = GameObject.Find("Background");
     }
     IEnumerator TypeText(string text)
     {
@@ -43,7 +43,7 @@ public class TextDialogue : MonoBehaviour
 
     public void SelfDispose()
     {
-        if (screenBackground != null && screenBackground.activeSelf)
+        if (screenBackground != null)
         {
             Destroy(screenBackground);
         }
