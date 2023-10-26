@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class TextDialogue : MonoBehaviour
 {
@@ -11,22 +14,41 @@ public class TextDialogue : MonoBehaviour
     public GameObject[] NextDialogue;
     public GameObject screenBackground;
 
+    public VideoClip[] myClips;
+    public VideoPlayer clipHolder;
+
 
     public int answerDataHolder;
     
     private void Start()
     {
-        
-        if (answerDataHolder == 0)
+        clipHolder = GameObject.Find("ClipHolder").GetComponent<VideoPlayer>();
+        if (answerDataHolder == 0 )
         {
             StartCoroutine(TypeText(dialogueTexts[0]));
+
+
+            PlayVideoClip(0);
+
         }
         else
         {
             StartCoroutine(TypeText(dialogueTexts[answerDataHolder]));
+
+            
+            PlayVideoClip(answerDataHolder);
         }
         screenBackground = GameObject.Find("Background");
     }
+    public void PlayVideoClip(int index)
+    {
+        if (index < myClips.Length && myClips != null)
+        {
+            clipHolder.clip = myClips[index];
+            clipHolder.Play();
+        }
+    }
+
     IEnumerator TypeText(string text)
     {
         dialogueText.text = "";
